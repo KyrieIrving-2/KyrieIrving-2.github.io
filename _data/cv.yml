@@ -1,0 +1,29 @@
+education:
+  - name: Xiamen University of Technology
+    department: Virtual Reality Key Laboratory
+    degree: M.Sc. (expected)
+    dates: 2024 - Present
+    location: Xiamen, China
+
+skills:
+  - name: Programming
+    items: Python, C++, JavaScript, Shell
+  - name: Computer Vision
+    items: Object Tracking, Object Detection, Semantic Segmentation
+  - name: Frameworks
+    items: PyTorch, YOLOv8/v11, SAM2, GroundingDINO
+  - name: Edge Deployment
+    items: Sophon BM1684/BM1688, BMCV, SAIL
+  - name: Tools
+    items: Git, Docker, CVAT, LabelMe
+
+projects:
+  - title: Anti-UAV410 Benchmark
+    description: Large-scale anti-UAV tracking benchmark with 410 sequences
+    dates: 2024 - 2026
+  - title: PPE Detection System
+    description: Real-time PPE detection on edge devices for construction safety
+    dates: 2025 - 2026
+  - title: ReSeT Tracker
+    description: Robust spatial-temporal tracking framework for anti-UAV
+    dates: 2026 - 2027
