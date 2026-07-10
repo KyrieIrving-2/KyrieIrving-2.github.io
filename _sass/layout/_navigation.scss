@@ -234,6 +234,20 @@
       }
     }
 
+    #lang-toggle {
+      a {
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .lang-text {
+        font-family: $serif;
+        font-weight: 700;
+        font-size: 0.85em;
+      }
+    }
+
     a {
       position: relative;
 

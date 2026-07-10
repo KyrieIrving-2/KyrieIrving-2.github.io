@@ -11,7 +11,7 @@ locale                   : "en-US"
 site_theme               : "newspaper" # Classic broadsheet newspaper style with serif fonts
 title                    : "Jiahong Su"
 title_separator          : "-"
-name                     : &name "Jiahong Su"
+name                     : &name "Jiahong Su (苏家弘)"
 description              : &description "Master's student in Computer Science at Xiamen University of Technology, Virtual Reality Key Laboratory."
 url                      : https://kyrieirving-2.github.io
 baseurl                  : ""
@@ -23,7 +23,7 @@ repository               : "KyrieIrving-2/KyrieIrving-2.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Jiahong Su"
+  name             : "Jiahong Su (苏家弘)"
   pronouns         :
   bio              : "Master's student in Computer Science at Xiamen University of Technology."
   location         : "Xiamen, China"
