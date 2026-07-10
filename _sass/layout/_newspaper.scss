@@ -1,0 +1,325 @@
+/* ==========================================================================
+   NEWSPAPER THEME LAYOUT
+   经典大报排版风格
+   ========================================================================== */
+
+/* Newspaper fonts (also loaded via head/custom.html) */
+$np-display-font   : 'Old Standard TT', 'Times New Roman', Georgia, serif;
+$np-heading-font   : 'Lora', Georgia, 'Times New Roman', serif;
+$np-body-font      : 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+
+/* ==========================================================================
+   BODY & GLOBAL - 纸面背景 + 衬线字体
+   ========================================================================== */
+body {
+  background: var(--paper-bg);
+  font-family: $np-body-font;
+  color: var(--ink-color);
+}
+
+/* Broadsheet container effect */
+#main {
+  background: var(--paper-bg);
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+}
+
+/* ==========================================================================
+   MASTHEAD - 报纸刊头风格
+   ========================================================================== */
+.masthead {
+  background: var(--paper-bg) !important;
+  border-bottom: none !important;
+  text-align: center;
+  padding: 1.5em 1em 0.5em !important;
+
+  &::after {
+    display: none !important;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 960px;
+    height: 3px;
+    background: var(--rule-color);
+  }
+}
+
+.masthead__inner-wrap {
+  font-family: $np-display-font !important;
+  padding: 0.5em 1em !important;
+
+  .masthead__menu-item--lg {
+    font-family: $np-display-font !important;
+    font-size: 2em !important;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding-right: 0 !important;
+  }
+}
+
+.masthead__menu {
+  border-top: 3px solid var(--rule-color);
+  border-bottom: 1px solid var(--rule-color);
+  margin-top: 0.5em;
+  padding: 0.5em 0 !important;
+
+  ul {
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.masthead__menu-item {
+  background: transparent !important;
+  font-family: $np-body-font !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85em;
+  padding: 0 1em !important;
+
+  a {
+    font-weight: 600;
+  }
+}
+
+.greedy-nav {
+  background: transparent !important;
+}
+
+/* ==========================================================================
+   PAGE CONTENT - 文章正文
+   ========================================================================== */
+.page__title,
+h1, h2, h3, h4, h5, h6 {
+  font-family: $np-heading-font !important;
+}
+
+.page__title {
+  font-family: $np-display-font !important;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.page__content {
+  font-family: $np-body-font;
+  font-size: 1.05em;
+  line-height: 1.7;
+
+  h2 {
+    font-family: $np-heading-font;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 2px solid var(--rule-color) !important;
+    border-top: 1px solid var(--rule-color);
+    padding: 0.5em 0 !important;
+    margin-top: 1.5em;
+  }
+
+  h3 {
+    font-family: $np-heading-font;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-red);
+  }
+}
+
+/* ==========================================================================
+   SIDEBAR - 报纸分类广告框
+   ========================================================================== */
+.sidebar {
+  @media screen and (min-width: $sidebar-screen-min-width) {
+    padding-left: 0;
+  }
+}
+
+.author__avatar {
+  img {
+    border: 2px solid var(--rule-color) !important;
+    border-radius: 0 !important;
+  }
+}
+
+.author__name {
+  font-family: $np-display-font !important;
+  text-align: center;
+  border-bottom: 2px solid var(--rule-color);
+  padding-bottom: 0.5em;
+}
+
+.author__bio {
+  font-family: $np-body-font;
+  font-style: italic;
+  text-align: center;
+  color: var(--global-text-color-light);
+}
+
+.author__urls {
+  border: 1px solid var(--rule-color) !important;
+  border-radius: 0 !important;
+  background: var(--paper-bg) !important;
+  padding: 1em !important;
+
+  li {
+    border-bottom: 1px dotted var(--global-border-color);
+    padding: 0.3em 0;
+  }
+}
+
+/* ==========================================================================
+   ARCHIVE - 报纸列表
+   ========================================================================== */
+.archive__subtitle {
+  font-family: $np-heading-font !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-top: 2px solid var(--rule-color) !important;
+  border-bottom: 1px solid var(--rule-color) !important;
+  padding: 0.5em 0 !important;
+}
+
+.archive__item-title {
+  font-family: $np-heading-font !important;
+}
+
+.archive__item {
+  border-bottom: 1px solid var(--global-border-color);
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+/* ==========================================================================
+   CARDS - 去圆角，加边框
+   ========================================================================== */
+.archive__item,
+.feature__item,
+.grid__item {
+  border-radius: 0 !important;
+  border: 1px solid var(--global-border-color) !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+  background: var(--paper-bg) !important;
+
+  &:hover {
+    border-color: var(--accent-red) !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12) !important;
+  }
+}
+
+/* ==========================================================================
+   BUTTONS - 直角，暗红
+   ========================================================================== */
+.btn {
+  border-radius: 0 !important;
+  font-family: $np-body-font !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85em;
+
+  &:hover {
+    background: var(--accent-red) !important;
+    color: #fff !important;
+  }
+}
+
+/* ==========================================================================
+   TABLES - 报纸分类表
+   ========================================================================== */
+table {
+  border-radius: 0 !important;
+  border: 2px solid var(--rule-color) !important;
+  font-family: $np-body-font;
+
+  th {
+    background: var(--rule-color) !important;
+    color: var(--paper-bg) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: $np-body-font;
+  }
+}
+
+/* ==========================================================================
+   CODE BLOCKS - 打字机风格
+   ========================================================================== */
+pre {
+  border-radius: 0 !important;
+  border: 1px solid var(--rule-color) !important;
+  background: #efe9da !important;
+  font-family: 'Courier Prime', 'Courier New', monospace !important;
+}
+
+code {
+  border-radius: 0 !important;
+  font-family: 'Courier Prime', 'Courier New', monospace !important;
+}
+
+/* ==========================================================================
+   FOOTER - 报纸底栏
+   ========================================================================== */
+.page__footer {
+  background: var(--global-footer-bg-color) !important;
+  border-top: 3px solid var(--rule-color) !important;
+
+  h2, h3, h4 {
+    font-family: $np-heading-font !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* ==========================================================================
+   PAGE HERO - 去圆角
+   ========================================================================== */
+.page__hero--overlay {
+  border-radius: 0;
+}
+
+.page__hero-caption {
+  border-radius: 0 !important;
+}
+
+/* ==========================================================================
+   FORMS - 直角
+   ========================================================================== */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+textarea {
+  border-radius: 0 !important;
+  border: 1px solid var(--rule-color) !important;
+  font-family: $np-body-font;
+}
+
+/* ==========================================================================
+   TOC - 报纸风格目录
+   ========================================================================== */
+.toc {
+  border-radius: 0 !important;
+  border: 1px solid var(--rule-color) !important;
+  background: var(--paper-bg) !important;
+
+  .toc__title {
+    font-family: $np-heading-font !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid var(--rule-color) !important;
+  }
+}
+
+/* ==========================================================================
+   NOTICES - 报纸公告
+   ========================================================================== */
+.notice {
+  border-radius: 0 !important;
+  border-left: 4px solid var(--accent-red) !important;
+}

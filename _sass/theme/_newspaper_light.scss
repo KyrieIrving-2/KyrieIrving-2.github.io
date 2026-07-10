@@ -1,0 +1,54 @@
+/* ==========================================================================
+    NEWSPAPER THEME - LIGHT VERSION
+    经典大报色调 - 亮色主题
+    ========================================================================== */
+
+/* Color codes used for the theme */
+$primary-color              : #8b0000;
+$gray                       : #6b6b6b;
+$dark-gray                  : #1a1a1a;
+$darker-gray                : #0d0d0d;
+$light-gray                 : #999999;
+$lighter-gray               : #e8e3d8;
+
+/* Color codes used for the site */
+$danger-color               : #8b0000;
+$info-color                 : #4a6b6b;
+$notice-color               : #6b6b6b;
+$success-color              : #4a6b4a;
+$warning-color              : #8b6914;
+
+/* Other basic settings for the template */
+$border-radius              : 0;
+$box-shadow                 : 0 2px 8px rgba(0, 0, 0, 0.12);
+$global-transition          : all 0.2s ease;
+$masthead-height            : 80px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Newspaper light theme for the site */
+:root {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #f5f0e1;
+    --global-footer-bg-color            : #ede7d5;
+    --global-border-color               : #{$lighter-gray};
+    --global-dark-border-color          : #d4cec0;
+    --global-code-background-color      : #ede7d5;
+    --global-code-text-color            : #{$darker-gray};
+    --global-fig-caption-color          : #{$light-gray};
+    --global-link-color                 : #{$primary-color};
+    --global-link-color-hover           : #5a0000;
+    --global-link-color-visited         : #6b3333;
+    --global-masthead-link-color        : #{$dark-gray};
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$dark-gray};
+    --global-text-color-light           : #{$light-gray};
+    --global-thead-color                : #{$lighter-gray};
+    /* Newspaper-specific variables */
+    --paper-bg                          : #f5f0e1;
+    --ink-color                         : #1a1a1a;
+    --rule-color                        : #1a1a1a;
+    --accent-red                        : #8b0000;
+}

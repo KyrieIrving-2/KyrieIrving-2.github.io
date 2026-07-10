@@ -1,0 +1,60 @@
+/* ==========================================================================
+    NEWSPAPER THEME - DARK VERSION
+    经典大报色调 - 暗色主题
+    ========================================================================== */
+
+/* Color codes used for the theme */
+$primary-color              : #c9a227;
+$gray                       : #8a8278;
+$dark-gray                  : #d4cfc0;
+$darker-gray                : #f0ebe0;
+$light-gray                 : #6b6b6b;
+
+$background                 : #1a1815;
+$background-light           : #2a2622;
+$background-lighter         : #3a3633;
+$text                       : #d4cfc0;
+$link                       : #c9a227;
+$link-dark                  : #9a7a1a;
+
+/* Color codes used for the site */
+$danger-color               : #c92222;
+$info-color                 : #4a8b8b;
+$notice-color               : #8a8278;
+$success-color              : #4a8b4a;
+$warning-color              : #c9a227;
+
+/* Other basic settings for the template */
+$border-radius              : 0;
+$box-shadow                 : 0 2px 8px rgba(0, 0, 0, 0.3);
+$global-transition          : all 0.2s ease;
+$masthead-height            : 80px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Newspaper dark theme for the site */
+html[data-theme="dark"] {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$background};
+    --global-border-color               : #{$background-lighter};
+    --global-dark-border-color          : #{$background-light};
+    --global-code-background-color      : #{$background-light};
+    --global-code-text-color            : #{$text};
+    --global-fig-caption-color          : #{$light-gray};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-dark};
+    --global-link-color-visited         : #9a8b4a;
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #8a8278;
+    --global-thead-color                : #{$background-lighter};
+    /* Newspaper-specific variables */
+    --paper-bg                          : #1a1815;
+    --ink-color                         : #d4cfc0;
+    --rule-color                        : #d4cfc0;
+    --accent-red                        : #c9a227;
+}
