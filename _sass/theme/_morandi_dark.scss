@@ -1,0 +1,60 @@
+/* ==========================================================================
+    MORANDI THEME - DARK VERSION
+    莫兰迪色调 - 暗色主题
+    ========================================================================== */
+
+/* Color codes used for the theme */
+$primary-color              : #9DB0B3;
+$gray                       : #8A8278;
+$dark-gray                  : mix(#000, $gray, 40%);
+$darker-gray                : mix(#000, $gray, 60%);
+$light-gray                 : mix(#fff, $gray, 50%);
+
+$background                 : #2A2826;
+$background-light           : mix(#fff, $background, 80%);
+$background-lighter         : mix(#fff, $background, 90%);
+$text                       : #D4CFC8;
+$link                       : #9DB0B3;
+$link-dark                  : mix(#000, $link, 25%);
+$link-light                 : mix(#fff, $link, 25%);
+
+/* Color codes used for the site */
+$danger-color               : #C08A82;
+$info-color                 : #9DB0B3;
+$notice-color               : #8A8278;
+$success-color              : #8FA88E;
+$warning-color              : #C4A882;
+
+/* Other basic settings for the template */
+$border-radius              : 12px;
+$box-shadow                 : 0 8px 32px rgba(0, 0, 0, 0.3);
+$global-transition          : all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Morandi dark theme for the site */
+html[data-theme="dark"] {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$background};
+    --global-border-color               : #{$light-gray};
+    --global-dark-border-color          : #{$background-light};
+    --global-code-background-color      : #{$background-light};
+    --global-code-text-color            : #{$darker-gray};
+    --global-fig-caption-color          : #{$light-gray};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-dark};
+    --global-link-color-visited         : #{$link-light};
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #B0ABA4;
+    --global-thead-color                : #{$background-lighter};
+    /* Frosted glass variables */
+    --glass-bg                          : rgba(42, 40, 38, 0.65);
+    --glass-border                      : rgba(255, 255, 255, 0.08);
+    --glass-shadow                      : 0 8px 32px rgba(0, 0, 0, 0.3);
+}

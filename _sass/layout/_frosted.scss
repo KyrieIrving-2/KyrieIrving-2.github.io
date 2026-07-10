@@ -1,0 +1,231 @@
+/* ==========================================================================
+   FROSTED GLASS / GLASSMORPHISM
+   苹果毛玻璃效果 - 莫兰迪色调
+   ========================================================================== */
+
+/* body gradient background — provides content for backdrop blur */
+body {
+  background:
+    radial-gradient(at 20% 30%, rgba(139,154,157,0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 20%, rgba(193,168,158,0.12) 0px, transparent 50%),
+    radial-gradient(at 60% 80%, rgba(168,176,165,0.15) 0px, transparent 50%),
+    radial-gradient(at 10% 90%, rgba(180,170,160,0.10) 0px, transparent 50%),
+    var(--global-bg-color);
+  background-attachment: fixed;
+}
+
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(at 20% 30%, rgba(157,176,179,0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 20%, rgba(192,138,130,0.06) 0px, transparent 50%),
+    radial-gradient(at 60% 80%, rgba(143,168,142,0.08) 0px, transparent 50%),
+    var(--global-bg-color);
+  background-attachment: fixed;
+}
+
+/* Frosted glass with @supports fallback */
+@supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
+  .masthead,
+  .page__footer,
+  .toc,
+  .greedy-nav .hidden-links,
+  .author__urls,
+  .archive__item,
+  .feature__item,
+  .grid__item {
+    background: var(--glass-bg) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+}
+
+@supports not ((backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px))) {
+  .masthead,
+  .page__footer,
+  .toc,
+  .greedy-nav .hidden-links,
+  .author__urls,
+  .archive__item,
+  .feature__item,
+  .grid__item {
+    background: var(--global-bg-color) !important;
+  }
+}
+
+/* ==========================================================================
+   MASTHEAD - 顶部导航毛玻璃
+   ========================================================================== */
+.masthead {
+  background: var(--glass-bg) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+
+  &__menu-item {
+    background: transparent !important;
+  }
+}
+
+.greedy-nav {
+  background: transparent !important;
+}
+
+/* ==========================================================================
+   SIDEBAR - 侧边栏毛玻璃面板
+   ========================================================================== */
+.sidebar {
+  @media screen and (min-width: $sidebar-screen-min-width) {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-right: 1px solid var(--glass-border);
+    padding-left: 1em;
+  }
+}
+
+.author__avatar img {
+  border: 2px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow);
+}
+
+/* ==========================================================================
+   FOOTER - 页脚毛玻璃
+   ========================================================================== */
+.page__footer {
+  background: var(--glass-bg) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-top: 1px solid var(--glass-border);
+}
+
+/* ==========================================================================
+   TOC - 目录毛玻璃卡片
+   ========================================================================== */
+.toc {
+  background: var(--glass-bg) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* ==========================================================================
+   DROPDOWNS - 下拉菜单毛玻璃
+   ========================================================================== */
+.greedy-nav .hidden-links,
+.author__urls {
+  background: var(--glass-bg) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* ==========================================================================
+   CARDS - 归档/项目卡片毛玻璃
+   ========================================================================== */
+.archive__item,
+.feature__item,
+.grid__item {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: $border-radius;
+  box-shadow: var(--glass-shadow);
+  padding: 1em;
+  margin-bottom: 1.5em;
+  transition: $global-transition;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(74, 69, 64, 0.12);
+    border-color: rgba(139, 154, 157, 0.3);
+  }
+}
+
+/* ==========================================================================
+   BUTTONS - 按钮毛玻璃
+   ========================================================================== */
+.btn {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow);
+
+  &:hover {
+    background: var(--global-base-color);
+    border-color: var(--global-base-color) !important;
+  }
+}
+
+/* ==========================================================================
+   TABLES - 表格毛玻璃
+   ========================================================================== */
+table {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+thead {
+  background: rgba(139, 154, 157, 0.1);
+}
+
+/* ==========================================================================
+   CODE - 代码块毛玻璃
+   ========================================================================== */
+pre {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: $border-radius;
+}
+
+/* ==========================================================================
+   HERO OVERLAY - 封面毛玻璃
+   ========================================================================== */
+.page__hero--overlay {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* ==========================================================================
+   FORMS - 输入框毛玻璃
+   ========================================================================== */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+textarea {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: $border-radius;
+}
+
+/* ==========================================================================
+   SCROLLBAR - 滚动条美化
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 154, 157, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 154, 157, 0.5);
+}
